@@ -40,21 +40,33 @@ Version | Language | Xcode | iOS
  1.0.0  | Swift 4.1  |  9.0  | 10.0
 
 # Programming Guide
-This section intends to give an overview about this component and its usage. Not all features included in this component will be covered here. The focus of this section will be:
+The Markov Model can be used to achieve many goals. This section will explain the usage while providing some possible scenarios.
 
-* Initialization
+* Traning the Model
 * Feature-1
 * Feature-2
 * Feature-3
 
-#### Initialization
-Start by importing the package in the file you want to use it.
+#### Training the Model
+Start by importing the package in the file you want to use it. There are two options of working with the model. By instantiating or by traning it statically.
 
 ```
 import MarkovModel
+...
+let model = MarkovModel(transitions: ["A", "B", "C", "A", "C"])
 ```
 
-#### Feature-1
+For very large amount of data (transitions), you may rather take the static approach, once it can train the model and work on it all at once in a closure.
+
+```
+import MarkovModel
+...
+MarkovModel.process(transitions: ["A", "B", "C", "A", "C"]) { model in
+	// perform the operations on model
+}
+```
+
+#### Calculating future states
 Describe usage of Feature-1
 
 ```

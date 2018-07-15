@@ -45,7 +45,7 @@ func buildNames(count: Int, file: String) -> String {
 		let given = buildName(first: letter, matrix: models.given.matrix)
 		let family = buildName(first: given.lastLetter, matrix: models.family.matrix)
 		
-		letter = family.lastLetter
+		letter = given.lastLetter
 		generatedNames.append("\(given.name) \(family.name)")
 	}
 	
@@ -67,8 +67,8 @@ func buildModels(with names: [String]) -> NamesModel {
 	
 	names.forEach {
 		let components = $0.components(separatedBy: .whitespaces)
-		forenames += components.prefix(1).filter { !$0.isEmpty }
-		surnames += components.suffix(from: 1).filter { !$0.isEmpty }
+		forenames.append(contentsOf: components.prefix(1).filter { !$0.isEmpty })
+		surnames.append(contentsOf: components.suffix(from: 1).filter { !$0.isEmpty })
 	}
 	
 	let forenamesModel = MarkovModel(transitions: Array(forenames.reduce("", +)))
@@ -128,5 +128,5 @@ Try to switch the `file` to:
 
 (you may have to clear them with Find & Replace regex: `\(.*?\)`)
 */
-let randomNames = buildNames(count: 20, file: "Names/Serbian.txt")
+let randomNames = buildNames(count: 20, file: "Names/Brazilian.txt")
 print(randomNames)
