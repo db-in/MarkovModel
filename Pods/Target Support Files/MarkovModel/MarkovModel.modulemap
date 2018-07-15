@@ -1,0 +1,6 @@
+framework module MarkovModel {
+  umbrella header "MarkovModel-umbrella.h"
+
+  export *
+  module * { export * }
+}

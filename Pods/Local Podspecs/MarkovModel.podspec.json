@@ -1,0 +1,29 @@
+{
+  "name": "MarkovModel",
+  "version": "1.0.0",
+  "summary": "Micro Feature",
+  "description": "MarkovModel is resposible for ...",
+  "homepage": "https://db-in.com",
+  "documentation_url": "https://github.com/dineybomfim/MarkovModel/Documentation",
+  "license": {
+    "type": "GPU",
+    "file": "LICENSE"
+  },
+  "authors": "Diney Bomfim",
+  "source": {
+    "git": "https://github.com/dineybomfim/MarkovModel.git",
+    "tag": "RELEASE-1.0.0",
+    "submodules": true
+  },
+  "swift_version": "4.1",
+  "requires_arc": true,
+  "platforms": {
+    "ios": "10.0"
+  },
+  "public_header_files": "MarkovModel/**/*.h",
+  "source_files": "MarkovModel/**/*.{h,m,swift}",
+  "exclude_files": "MarkovModel/**/Info.plist",
+  "ios": {
+    "frameworks": "Foundation"
+  }
+}

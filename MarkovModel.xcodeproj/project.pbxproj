@@ -1,0 +1,987 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		603B602220EB367C00DA40CB /* SwiftLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 603B604A20EB367C00DA40CB /* Build configuration list for PBXAggregateTarget "SwiftLint" */;
+			buildPhases = (
+				603B602120EB367C00DA40CB /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = SwiftLint;
+			productName = SwiftLint;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		597B201E33EB6CB11800359A /* Pods_MarkovModelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D237B31C88F22E74EB06491 /* Pods_MarkovModelTests.framework */; };
+		603B602720EB367C00DA40CB /* MarkovModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 603B602620EB367C00DA40CB /* MarkovModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		603B603220EB367C00DA40CB /* MarkovModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603B601F20EB367C00DA40CB /* MarkovModel.framework */; };
+		603B603E20EB367C00DA40CB /* MarkovModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603B601F20EB367C00DA40CB /* MarkovModel.framework */; };
+		603B604320EB367C00DA40CB /* ModuleIntegrationTestsSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603B604220EB367C00DA40CB /* ModuleIntegrationTestsSpecs.swift */; };
+		603B605720EB369400DA40CB /* MarkovModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603B605420EB369300DA40CB /* MarkovModel.swift */; };
+		603B605820EB369400DA40CB /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603B605520EB369300DA40CB /* Matrix.swift */; };
+		603B605D20EB36E500DA40CB /* MatrixSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603B605A20EB36E500DA40CB /* MatrixSpecs.swift */; };
+		603B605F20EB36E500DA40CB /* MarkovModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603B605C20EB36E500DA40CB /* MarkovModelSpec.swift */; };
+		9B98A7A40828739CE7AD13DA /* Pods_ModuleIntegrationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC0AACD811D8997A884CAF8 /* Pods_ModuleIntegrationTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		603B603320EB367C00DA40CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 603B601620EB367C00DA40CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 603B601E20EB367C00DA40CB;
+			remoteInfo = MarkovModel;
+		};
+		603B603F20EB367C00DA40CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 603B601620EB367C00DA40CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 603B601E20EB367C00DA40CB;
+			remoteInfo = MarkovModel;
+		};
+		608207ED20EB403C0023066C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 603B601620EB367C00DA40CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 603B602220EB367C00DA40CB;
+			remoteInfo = SwiftLint;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		316DE3CCADB1F23E357E182F /* Pods-ModuleIntegrationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModuleIntegrationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ModuleIntegrationTests/Pods-ModuleIntegrationTests.release.xcconfig"; sourceTree = "<group>"; };
+		37E870F0A86E8F9ED820304D /* Pods-MarkovModelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarkovModelTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarkovModelTests/Pods-MarkovModelTests.release.xcconfig"; sourceTree = "<group>"; };
+		4AF3222EA1A8091170A50C22 /* Pods-MarkovModelTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarkovModelTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarkovModelTests/Pods-MarkovModelTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5EC0AACD811D8997A884CAF8 /* Pods_ModuleIntegrationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ModuleIntegrationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		603B601F20EB367C00DA40CB /* MarkovModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarkovModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		603B602420EB367C00DA40CB /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
+		603B602520EB367C00DA40CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		603B602620EB367C00DA40CB /* MarkovModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarkovModel.h; sourceTree = "<group>"; };
+		603B602820EB367C00DA40CB /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .swiftlint.yml; path = ../.swiftlint.yml; sourceTree = "<group>"; };
+		603B602920EB367C00DA40CB /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		603B602A20EB367C00DA40CB /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
+		603B602B20EB367C00DA40CB /* MarkovModel.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = MarkovModel.podspec; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		603B602C20EB367C00DA40CB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		603B603120EB367C00DA40CB /* MarkovModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarkovModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		603B603820EB367C00DA40CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		603B603D20EB367C00DA40CB /* ModuleIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModuleIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		603B604220EB367C00DA40CB /* ModuleIntegrationTestsSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleIntegrationTestsSpecs.swift; sourceTree = "<group>"; };
+		603B604420EB367C00DA40CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		603B605420EB369300DA40CB /* MarkovModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkovModel.swift; sourceTree = "<group>"; };
+		603B605520EB369300DA40CB /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
+		603B605A20EB36E500DA40CB /* MatrixSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixSpecs.swift; sourceTree = "<group>"; };
+		603B605C20EB36E500DA40CB /* MarkovModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkovModelSpec.swift; sourceTree = "<group>"; };
+		9D237B31C88F22E74EB06491 /* Pods_MarkovModelTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarkovModelTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9B2CB71DAD4015F00F9B658 /* Pods-ModuleIntegrationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ModuleIntegrationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ModuleIntegrationTests/Pods-ModuleIntegrationTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		603B601B20EB367C00DA40CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		603B602E20EB367C00DA40CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				603B603220EB367C00DA40CB /* MarkovModel.framework in Frameworks */,
+				597B201E33EB6CB11800359A /* Pods_MarkovModelTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		603B603A20EB367C00DA40CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				603B603E20EB367C00DA40CB /* MarkovModel.framework in Frameworks */,
+				9B98A7A40828739CE7AD13DA /* Pods_ModuleIntegrationTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D87E5AF500CC7308DA1048B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9D237B31C88F22E74EB06491 /* Pods_MarkovModelTests.framework */,
+				5EC0AACD811D8997A884CAF8 /* Pods_ModuleIntegrationTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		603B601520EB367C00DA40CB = {
+			isa = PBXGroup;
+			children = (
+				3D87E5AF500CC7308DA1048B /* Frameworks */,
+				603B602320EB367C00DA40CB /* MarkovModel */,
+				603B603520EB367C00DA40CB /* MarkovModelTests */,
+				603B604120EB367C00DA40CB /* ModuleIntegrationTests */,
+				7707DE2F807A74BCCD0CC011 /* Pods */,
+				603B602020EB367C00DA40CB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		603B602020EB367C00DA40CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				603B601F20EB367C00DA40CB /* MarkovModel.framework */,
+				603B603120EB367C00DA40CB /* MarkovModelTests.xctest */,
+				603B603D20EB367C00DA40CB /* ModuleIntegrationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		603B602320EB367C00DA40CB /* MarkovModel */ = {
+			isa = PBXGroup;
+			children = (
+				603B602420EB367C00DA40CB /* .gitignore */,
+				603B602820EB367C00DA40CB /* .swiftlint.yml */,
+				603B602520EB367C00DA40CB /* Info.plist */,
+				603B602920EB367C00DA40CB /* LICENSE */,
+				603B602620EB367C00DA40CB /* MarkovModel.h */,
+				603B602B20EB367C00DA40CB /* MarkovModel.podspec */,
+				603B602A20EB367C00DA40CB /* Podfile */,
+				603B602C20EB367C00DA40CB /* README.md */,
+				603B605320EB369300DA40CB /* Sources */,
+			);
+			path = MarkovModel;
+			sourceTree = "<group>";
+		};
+		603B603520EB367C00DA40CB /* MarkovModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				603B603820EB367C00DA40CB /* Info.plist */,
+				603B605C20EB36E500DA40CB /* MarkovModelSpec.swift */,
+				603B605A20EB36E500DA40CB /* MatrixSpecs.swift */,
+			);
+			path = MarkovModelTests;
+			sourceTree = "<group>";
+		};
+		603B604120EB367C00DA40CB /* ModuleIntegrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				603B604220EB367C00DA40CB /* ModuleIntegrationTestsSpecs.swift */,
+				603B604420EB367C00DA40CB /* Info.plist */,
+			);
+			path = ModuleIntegrationTests;
+			sourceTree = "<group>";
+		};
+		603B605320EB369300DA40CB /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				603B605420EB369300DA40CB /* MarkovModel.swift */,
+				603B605520EB369300DA40CB /* Matrix.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		7707DE2F807A74BCCD0CC011 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4AF3222EA1A8091170A50C22 /* Pods-MarkovModelTests.debug.xcconfig */,
+				37E870F0A86E8F9ED820304D /* Pods-MarkovModelTests.release.xcconfig */,
+				E9B2CB71DAD4015F00F9B658 /* Pods-ModuleIntegrationTests.debug.xcconfig */,
+				316DE3CCADB1F23E357E182F /* Pods-ModuleIntegrationTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		603B601C20EB367C00DA40CB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				603B602720EB367C00DA40CB /* MarkovModel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		603B601E20EB367C00DA40CB /* MarkovModel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 603B604720EB367C00DA40CB /* Build configuration list for PBXNativeTarget "MarkovModel" */;
+			buildPhases = (
+				603B601A20EB367C00DA40CB /* Sources */,
+				603B601B20EB367C00DA40CB /* Frameworks */,
+				603B601C20EB367C00DA40CB /* Headers */,
+				603B601D20EB367C00DA40CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				608207EE20EB403C0023066C /* PBXTargetDependency */,
+			);
+			name = MarkovModel;
+			productName = MarkovModel;
+			productReference = 603B601F20EB367C00DA40CB /* MarkovModel.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		603B603020EB367C00DA40CB /* MarkovModelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 603B604D20EB367C00DA40CB /* Build configuration list for PBXNativeTarget "MarkovModelTests" */;
+			buildPhases = (
+				F355A68F99452D34B544BAE9 /* [CP] Check Pods Manifest.lock */,
+				603B602D20EB367C00DA40CB /* Sources */,
+				603B602E20EB367C00DA40CB /* Frameworks */,
+				603B602F20EB367C00DA40CB /* Resources */,
+				4CB7CA86E8F0C6359AF56D69 /* [CP] Embed Pods Frameworks */,
+				FF9F4F553CED544B46BF7195 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				603B603420EB367C00DA40CB /* PBXTargetDependency */,
+			);
+			name = MarkovModelTests;
+			productName = MarkovModelTests;
+			productReference = 603B603120EB367C00DA40CB /* MarkovModelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		603B603C20EB367C00DA40CB /* ModuleIntegrationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 603B605020EB367C00DA40CB /* Build configuration list for PBXNativeTarget "ModuleIntegrationTests" */;
+			buildPhases = (
+				BAA50D92AD112D1EE61A7104 /* [CP] Check Pods Manifest.lock */,
+				603B603920EB367C00DA40CB /* Sources */,
+				603B603A20EB367C00DA40CB /* Frameworks */,
+				603B603B20EB367C00DA40CB /* Resources */,
+				A57EB71EF27B2C73A76656C4 /* [CP] Embed Pods Frameworks */,
+				007C1F912B5E794BBFF6DE52 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				603B604020EB367C00DA40CB /* PBXTargetDependency */,
+			);
+			name = ModuleIntegrationTests;
+			productName = ModuleIntegrationTests;
+			productReference = 603B603D20EB367C00DA40CB /* ModuleIntegrationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		603B601620EB367C00DA40CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Emirates;
+				TargetAttributes = {
+					603B601E20EB367C00DA40CB = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					603B602220EB367C00DA40CB = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					603B603020EB367C00DA40CB = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					603B603C20EB367C00DA40CB = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 603B601920EB367C00DA40CB /* Build configuration list for PBXProject "MarkovModel" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 603B601520EB367C00DA40CB;
+			productRefGroup = 603B602020EB367C00DA40CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				603B601E20EB367C00DA40CB /* MarkovModel */,
+				603B602220EB367C00DA40CB /* SwiftLint */,
+				603B603020EB367C00DA40CB /* MarkovModelTests */,
+				603B603C20EB367C00DA40CB /* ModuleIntegrationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		603B601D20EB367C00DA40CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		603B602F20EB367C00DA40CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		603B603B20EB367C00DA40CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		007C1F912B5E794BBFF6DE52 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ModuleIntegrationTests/Pods-ModuleIntegrationTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4CB7CA86E8F0C6359AF56D69 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MarkovModelTests/Pods-MarkovModelTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MarkovModelTests/Pods-MarkovModelTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		603B602120EB367C00DA40CB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nfileCount=$(find ./MarkovModel \"(\" -name \"*.swift\" \")\" -maxdepth 1 -type f|wc -l)\nif [ $fileCount -gt 0 ]; then\nswiftlint\nfi\nelse\necho \"Warning: SwiftLint was not installed correctly\"\nfi";
+		};
+		A57EB71EF27B2C73A76656C4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ModuleIntegrationTests/Pods-ModuleIntegrationTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/MarkovModel/MarkovModel.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarkovModel.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ModuleIntegrationTests/Pods-ModuleIntegrationTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAA50D92AD112D1EE61A7104 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ModuleIntegrationTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F355A68F99452D34B544BAE9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MarkovModelTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF9F4F553CED544B46BF7195 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MarkovModelTests/Pods-MarkovModelTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		603B601A20EB367C00DA40CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				603B605820EB369400DA40CB /* Matrix.swift in Sources */,
+				603B605720EB369400DA40CB /* MarkovModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		603B602D20EB367C00DA40CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				603B605F20EB36E500DA40CB /* MarkovModelSpec.swift in Sources */,
+				603B605D20EB36E500DA40CB /* MatrixSpecs.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		603B603920EB367C00DA40CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				603B604320EB367C00DA40CB /* ModuleIntegrationTestsSpecs.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		603B603420EB367C00DA40CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 603B601E20EB367C00DA40CB /* MarkovModel */;
+			targetProxy = 603B603320EB367C00DA40CB /* PBXContainerItemProxy */;
+		};
+		603B604020EB367C00DA40CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 603B601E20EB367C00DA40CB /* MarkovModel */;
+			targetProxy = 603B603F20EB367C00DA40CB /* PBXContainerItemProxy */;
+		};
+		608207EE20EB403C0023066C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 603B602220EB367C00DA40CB /* SwiftLint */;
+			targetProxy = 608207ED20EB403C0023066C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		603B604520EB367C00DA40CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_THUMB_SUPPORT = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		603B604620EB367C00DA40CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_THUMB_SUPPORT = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		603B604820EB367C00DA40CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MarkovModel/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.db-in.micro-feature.MarkovModel";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		603B604920EB367C00DA40CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MarkovModel/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.db-in.micro-feature.MarkovModel";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		603B604B20EB367C00DA40CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = SwiftLint;
+			};
+			name = Debug;
+		};
+		603B604C20EB367C00DA40CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = SwiftLint;
+			};
+			name = Release;
+		};
+		603B604E20EB367C00DA40CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AF3222EA1A8091170A50C22 /* Pods-MarkovModelTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = MarkovModelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "___VARIABLE_bundleIdentifierPrefix:bundleIdentifier___.MarkovModelTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		603B604F20EB367C00DA40CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37E870F0A86E8F9ED820304D /* Pods-MarkovModelTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = MarkovModelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "___VARIABLE_bundleIdentifierPrefix:bundleIdentifier___.MarkovModelTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		603B605120EB367C00DA40CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9B2CB71DAD4015F00F9B658 /* Pods-ModuleIntegrationTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = ModuleIntegrationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "___VARIABLE_bundleIdentifierPrefix:bundleIdentifier___.ModuleIntegrationTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		603B605220EB367C00DA40CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 316DE3CCADB1F23E357E182F /* Pods-ModuleIntegrationTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = ModuleIntegrationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "___VARIABLE_bundleIdentifierPrefix:bundleIdentifier___.ModuleIntegrationTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		603B601920EB367C00DA40CB /* Build configuration list for PBXProject "MarkovModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				603B604520EB367C00DA40CB /* Debug */,
+				603B604620EB367C00DA40CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		603B604720EB367C00DA40CB /* Build configuration list for PBXNativeTarget "MarkovModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				603B604820EB367C00DA40CB /* Debug */,
+				603B604920EB367C00DA40CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		603B604A20EB367C00DA40CB /* Build configuration list for PBXAggregateTarget "SwiftLint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				603B604B20EB367C00DA40CB /* Debug */,
+				603B604C20EB367C00DA40CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		603B604D20EB367C00DA40CB /* Build configuration list for PBXNativeTarget "MarkovModelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				603B604E20EB367C00DA40CB /* Debug */,
+				603B604F20EB367C00DA40CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		603B605020EB367C00DA40CB /* Build configuration list for PBXNativeTarget "ModuleIntegrationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				603B605120EB367C00DA40CB /* Debug */,
+				603B605220EB367C00DA40CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 603B601620EB367C00DA40CB /* Project object */;
+}

@@ -1,0 +1,6 @@
+framework module Pods_MarkovModelTests {
+  umbrella header "Pods-MarkovModelTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
