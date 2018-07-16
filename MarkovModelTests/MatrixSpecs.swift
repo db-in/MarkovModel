@@ -91,5 +91,29 @@ class MatrixSpec : QuickSpec {
 				}
 			}
 		}
+		
+		describe("Testing description on matrix") {
+			
+			context("With the vector [1, 2, 1, 2]") {
+				
+				it("Should present the description correctly") {
+					let matrix = [1, 2, 1, 2].makeTransitionsMatrix()
+					let string = "   2     1    \n\n| 0.00  1.00 |  2   \n|            |\n| 1.00  0.00 |  1   "
+					expect(matrix.description).to(equal(string))
+				}
+			}
+		}
+		
+		describe("Testing states of a matrix") {
+			
+			context("With the vector [1, 2, 1, 2]") {
+				
+				it("Should output [1, 2]") {
+					let array = [1, 2, 1, 2]
+					let matrix = array.makeTransitionsMatrix()
+					expect(matrix.uniqueStates).to(equal(Array(Set(array))))
+				}
+			}
+		}
 	}
 }

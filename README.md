@@ -43,9 +43,7 @@ Version | Language | Xcode | iOS
 The Markov Model can be used to achieve many goals. This section will explain the usage while providing some possible scenarios.
 
 * Traning the Model
-* Feature-1
-* Feature-2
-* Feature-3
+* Decision Process
 
 #### Training the Model
 Start by importing the package in the file you want to use it. There are two options of working with the model. By instantiating or by traning it statically.
@@ -53,7 +51,7 @@ Start by importing the package in the file you want to use it. There are two opt
 ```
 import MarkovModel
 ...
-let model = MarkovModel(transitions: ["A", "B", "C", "A", "C"])
+let markovModel = MarkovModel(transitions: ["A", "B", "C", "A", "C"])
 ```
 
 For very large amount of data (transitions), you may rather take the static approach, once it can train the model and work on it all at once in a closure.
@@ -66,14 +64,29 @@ MarkovModel.process(transitions: ["A", "B", "C", "A", "C"]) { model in
 }
 ```
 
-#### Calculating future states
-Describe usage of Feature-1
+#### Decision Process
+For performance and better API design, all the Markov Decision Process algorithms are done in the matrix itself.
+You can calculate any future state by calling `next`. There are 3 possible decision process options: `predict`, `random` and `weightedRandom`.
 
 ```
-// Some code for Feature-1
+markovModel.matrix.next(given: "B", process: .random)
 ```
+
+You can ommit the process parameter and the default option will be `predict`.
+
+
+```
+markovModel.matrix.next(given: "B")
+```
+
+Sometimes you may want to some column of the matrix itself. The method `probabilities` can be used to retrieve all the possible transitions from a given state.
+
+```
+markovModel.matrix.probabilities(given: "B")
+```
+
 
 # FAQ
-> Possible Question-1?
+> What about the states with zero transitions?
 
-- Answer for Question-1
+- For memmory safe and performance, they are not even considered by the `MarkovModel`, once they have no effect over the Decision Process.

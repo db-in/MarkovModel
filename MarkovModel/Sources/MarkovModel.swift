@@ -33,7 +33,8 @@ public struct MarkovModel<T : Hashable> {
 
 // MARK: - Properties
 	
-	/// The matrix is the essense of Markov Model. It represents the from-to states.
+	/// The Markov Chain is a matrix which is the essense of Markov Model.
+	/// It represents the from-to states.
 	///
 	///		   From
 	///		| 1 0 0 |
@@ -42,7 +43,7 @@ public struct MarkovModel<T : Hashable> {
 	///
 	/// The data is represented by a bi-dimensional dictionary of integer numbers in order
 	/// to optimize memory and performance.
-	public private(set) var matrix: Matrix<T>
+	public private(set) var chain: Matrix<T>
 	
 // MARK: - Constructors
 	
@@ -53,7 +54,7 @@ public struct MarkovModel<T : Hashable> {
 	///
 	/// - Complexity: O(n), where *n* is the length of the **transitions**.
 	public init(transitions: [T]) {
-		matrix = transitions.makeTransitionsMatrix()
+		chain = transitions.makeTransitionsMatrix()
 	}
 	
 	/// This method is dedicated for large transition data processing.
@@ -68,8 +69,18 @@ public struct MarkovModel<T : Hashable> {
 	}
 }
 
-public extension Matrix {
+public extension Matrix where Value == Vector<Key> {
 
+	/// All the unique states present in the current matrix.
+	/// Even though it's a **from** or **to** state only, it will be counted as a unique state.
+	///
+	/// - Complexity: O(n log n),  where *n* is the matrix's size
+	public var uniqueStates: [Key] {
+		var result = Set<Key>(keys)
+		forEach { result.formUnion(Array($0.value.keys)) }
+		return Array(result)
+	}
+	
 	/// Given a current state, this method returns the probabilities of the next state.
 	///
 	/// - Parameter given: The current state.
@@ -78,7 +89,7 @@ public extension Matrix {
 	///
 	/// - Complexity: O(1), regardless the matrix's size.
 	public func probabilities(given: Key) -> Vector<Key> {
-		return self[given] as? Vector<Key> ?? [:]
+		return self[given] ?? [:]
 	}
 	
 	/// Given a current state, this method returns the next state, based on an input criteria.
@@ -91,7 +102,7 @@ public extension Matrix {
 	/// - Complexity: O(n), where *n* is the length of the possible transitions
 	///		for the given **states**.
 	public func next(given: Key, process: DecisionProcess = .predict) -> Key? {
-		guard let values = self[given] as? Vector<Key> else {
+		guard let values = self[given] else {
 			return nil
 		}
 		
@@ -106,5 +117,72 @@ public extension Matrix {
 			let probabilities = column.map { $0.value }
 			return column[probabilities.weightedRandomIndex].key
 		}
+	}
+	
+	/// A pretty printed representation of the matrix
+	///
+	///		        From
+	///		| 1.00  0.00  0.00 |
+	///		|                  |
+	///		| 0.00  1.00  0.00 | To
+	///		|                  |
+	///		| 0.00  0.00  1.00 |
+	public var description: String {
+		
+		let states = uniqueStates
+		let order = states.count
+		let spaces = [String](repeating: " ", count: order * 6).joined()
+		let allStates = states.map { " \(String(describing: $0).padding(to: 4, with: " ")) " }
+		var rows = [String](repeating: "|", count: order)
+		
+		states.forEach {
+			let columnVector = self[$0] ?? [:]
+			var sum = Float(columnVector.values.reduce(0, +))
+			
+			sum = sum < 1.0 ? 1.0 : sum
+			
+			(0..<order).forEach {
+				let value = Float(columnVector[states[$0]] ?? 0)
+				rows[$0] += " \(String(format: "%.2f", value / sum)) "
+			}
+		}
+		
+		rows = (0..<order).map { "\(rows[$0])|\(allStates[$0])" }
+		
+		return " \(allStates.joined()) \n\n\(rows.joined(separator: "\n|\(spaces)|\n"))"
+	}
+}
+
+// MARK: - Extension
+
+extension MarkovModel : CustomStringConvertible {
+	
+	/// A pretty printed representation of the Markov Chain (matrix)
+	///
+	///		        From
+	///		| 1.00  0.00  0.00 |
+	///		|                  |
+	///		| 0.00  1.00  0.00 | To
+	///		|                  |
+	///		| 0.00  0.00  1.00 |
+	public var description: String {
+		return chain.description
+	}
+}
+
+// MARK: - Extension
+
+private extension String {
+
+	func padding(to length: Int, with pad: String) -> String {
+		guard count < length else {
+			return "\(self.padding(toLength: length, withPad: pad, startingAt: 0))"
+		}
+
+		let half = Float(length - count) / 2
+		let left = String(repeating: " ", count: Int(half.rounded(.down)))
+		let right = String(repeating: " ", count: Int(half.rounded(.up)))
+
+		return "\(left)\(self)\(right)"
 	}
 }

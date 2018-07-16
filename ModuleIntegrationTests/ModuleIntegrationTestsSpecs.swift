@@ -32,7 +32,7 @@ class ModuleIntegrationTestsSpecs : QuickSpec {
 				
 				it("Should return [0,1,1,0] given the transitions [A, B, A]") {
 					let immutable = MarkovModel(transitions: ["A", "B", "A"])
-					expect(immutable.matrix.next(given: "B")).to(equal("A"))
+					expect(immutable.chain.next(given: "B")).to(equal("A"))
 				}
 			}
 		}

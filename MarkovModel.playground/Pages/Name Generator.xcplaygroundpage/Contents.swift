@@ -1,5 +1,6 @@
 import Foundation
 import MarkovModel
+import UIKit
 
 /*:
 # Name Generator using Markov Model
@@ -42,8 +43,8 @@ func buildNames(count: Int, file: String) -> String {
 	}
 	
 	(0...count).forEach { _ in
-		let given = buildName(first: letter, matrix: models.given.matrix)
-		let family = buildName(first: given.lastLetter, matrix: models.family.matrix)
+		let given = buildName(first: letter, matrix: models.given.chain)
+		let family = buildName(first: given.lastLetter, matrix: models.family.chain)
 		
 		letter = given.lastLetter
 		generatedNames.append("\(given.name) \(family.name)")
@@ -62,19 +63,17 @@ We reserve the capitular information (lower or upper case), it's important for t
 The `process` is the largest step, it might take several seconds to run.
 */
 func buildModels(with names: [String]) -> NamesModel {
-	var forenames = [String]()
-	var surnames = [String]()
+	var forenames = ""
+	var surnames = ""
 	
 	names.forEach {
 		let components = $0.components(separatedBy: .whitespaces)
-		forenames.append(contentsOf: components.prefix(1).filter { !$0.isEmpty })
-		surnames.append(contentsOf: components.suffix(from: 1).filter { !$0.isEmpty })
+		forenames += components.prefix(1).joined()
+		surnames += components.suffix(from: 1).joined()
 	}
 	
-	let forenamesModel = MarkovModel(transitions: Array(forenames.reduce("", +)))
-	let surnamesModel = MarkovModel(transitions: Array(surnames.reduce("", +)))
-	
-	return (forenamesModel, surnamesModel)
+	return (MarkovModel(transitions: Array(forenames)),
+			MarkovModel(transitions: Array(surnames)))
 }
 
 /*:
@@ -128,5 +127,5 @@ Try to switch the `file` to:
 
 (you may have to clear them with Find & Replace regex: `\(.*?\)`)
 */
-let randomNames = buildNames(count: 20, file: "Names/Brazilian.txt")
+let randomNames = buildNames(count: 20, file: "Names/Serbian.txt")
 print(randomNames)

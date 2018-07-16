@@ -22,7 +22,7 @@ func buildText(starting: String, length: Int, file: String) -> String {
 		.components(separatedBy: " ")
 	
 	MarkovModel.process(transitions: strings) { matrix in
-		buildWords(with: &text, length: length, matrix: matrix)
+		buildWords(with: &text, length: length, chain: matrix)
 	}
 	
 	return text
@@ -39,10 +39,10 @@ Try to switch the `process` between:
 - random
 - weightedRandom
 */
-func buildWords(with text: inout String, length: Int, matrix: Matrix<String>) {
+func buildWords(with text: inout String, length: Int, chain: Matrix<String>) {
 	var word = text
 	(0...length).forEach { _ in
-		if let next = matrix.next(given: word, process: .weightedRandom) {
+		if let next = chain.next(given: word, process: .weightedRandom) {
 			text.append(" \(next)")
 			word = next
 		}
