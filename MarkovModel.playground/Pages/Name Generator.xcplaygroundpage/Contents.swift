@@ -68,7 +68,7 @@ func buildModels(with names: [String]) -> NamesModel {
 	
 	names.forEach {
 		let components = $0.components(separatedBy: .whitespaces)
-		forenames += components.prefix(1).joined()
+		forenames += components.prefix(1)
 		surnames += components.suffix(from: 1).joined()
 	}
 	

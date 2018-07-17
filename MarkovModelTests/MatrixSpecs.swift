@@ -94,11 +94,20 @@ class MatrixSpec : QuickSpec {
 		
 		describe("Testing description on matrix") {
 			
-			context("With the vector [1, 2, 1, 2]") {
+			context("With the vector [1, 1, 2]") {
 				
 				it("Should present the description correctly") {
-					let matrix = [1, 2, 1, 2].makeTransitionsMatrix()
-					let string = "   2     1    \n\n| 0.00  1.00 |  2   \n|            |\n| 1.00  0.00 |  1   "
+					let matrix = [1, 1, 2].makeTransitionsMatrix()
+					let string = "   2     1    \n\n| 0.00  0.50 |  2   \n|            |\n| 0.00  0.50 |  1   "
+					expect(matrix.description).to(equal(string))
+				}
+			}
+			
+			context("With the vector [1]") {
+				
+				it("Should present the generict error print") {
+					let matrix = [1].makeTransitionsMatrix()
+					let string = "Due to performance reasons, description works from 1 to 100 states"
 					expect(matrix.description).to(equal(string))
 				}
 			}

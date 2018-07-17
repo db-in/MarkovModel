@@ -44,6 +44,7 @@ The Markov Model can be used to achieve many goals. This section will explain th
 
 * Traning the Model
 * Decision Process
+* Debugging
 
 #### Training the Model
 Start by importing the package in the file you want to use it. There are two options of working with the model. By instantiating or by traning it statically.
@@ -69,20 +70,37 @@ For performance and better API design, all the Markov Decision Process algorithm
 You can calculate any future state by calling `next`. There are 3 possible decision process options: `predict`, `random` and `weightedRandom`.
 
 ```
-markovModel.matrix.next(given: "B", process: .random)
+markovModel.chain.next(given: "B", process: .random)
 ```
 
 You can ommit the process parameter and the default option will be `predict`.
 
 
 ```
-markovModel.matrix.next(given: "B")
+markovModel.chain.next(given: "B")
 ```
 
 Sometimes you may want to some column of the matrix itself. The method `probabilities` can be used to retrieve all the possible transitions from a given state.
 
 ```
-markovModel.matrix.probabilities(given: "B")
+markovModel.chain.probabilities(given: "B")
+```
+#### Decision Process
+For performance and better API design, all the Markov Decision Process algorithms are done in the matrix itself.
+You can calculate any future state by calling `next`. There are 3 possible decision process options: `predict`, `random` and `weightedRandom`.
+
+```
+let markovModel = MarkovModel(transitions: ["A", "A", "B"])
+print(markovModel)
+// or
+print(markovModel.chain)
+
+// Will print
+   B     A    
+
+| 0.00  0.50 |  B   
+|            |
+| 0.00  0.50 |  A   
 ```
 
 

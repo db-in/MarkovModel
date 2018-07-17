@@ -129,6 +129,10 @@ public extension Matrix where Value == Vector<Key> {
 	///		| 0.00  0.00  1.00 |
 	public var description: String {
 		
+		guard (1..<10000) ~= count else {
+			return "Due to performance reasons, description works from 1 to 100 states"
+		}
+		
 		let states = uniqueStates
 		let order = states.count
 		let spaces = [String](repeating: " ", count: order * 6).joined()
