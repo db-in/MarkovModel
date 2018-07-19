@@ -5,8 +5,8 @@ Pod::Spec.new do |s|
   s.description = <<-DESC
                        MarkovModel is resposible for ...
                        DESC
-  s.homepage = "https://db-in.com"
-  s.documentation_url = "https://github.com/dineybomfim/MarkovModel/Documentation"
+  s.homepage = "http://blog.db-in.com/"
+  s.documentation_url = "https://dineybomfim.github.io/MarkovModel/"
   s.license = { :type => "GPU", :file => "LICENSE" }
   s.author = 'Diney Bomfim'
   s.source = { :git => "https://github.com/dineybomfim/MarkovModel.git", :tag => "RELEASE-#{s.version}", :submodules => true }
