@@ -3,12 +3,14 @@
 [![Build Status](https://travis-ci.org/dineybomfim/MarkovModel.svg?branch=master)](https://travis-ci.org/Alamofire/Alamofire)
 [![codecov](https://codecov.io/gh/dineybomfim/MarkovModel/branch/master/graph/badge.svg)](https://codecov.io/gh/dineybomfim/MarkovModel)
 ![POD](https://img.shields.io/badge/swift-4.1-red.svg)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/MarkovModel.svg)](https://img.shields.io/cocoapods/v/MarkovModel.svg)
+[![Platform](https://img.shields.io/cocoapods/p/MarkovModel.svg?style=flat)](https://markovmodel.github.io/MarkovModel)
+[![codebeat badge](https://codebeat.co/badges/366a5994-abec-4c41-8e64-6f71ff9eab33)](https://codebeat.co/projects/github-com-dineybomfim-markovmodel-master)
 <!--
 [![CocoaPods](https://img.shields.io/cocoapods/at/MarkovModel.svg)]()
 [![CocoaPods](https://img.shields.io/cocoapods/dt/MarkovModel.svg?label=pod-downloads)]()
-[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/MarkovModel.svg)](https://img.shields.io/cocoapods/v/MarkovModel.svg)
-[![Platform](https://img.shields.io/cocoapods/p/MarkovModel.svg?style=flat)](https://markovmodel.github.io/MarkovModel)-->
-[![codebeat badge](https://codebeat.co/badges/366a5994-abec-4c41-8e64-6f71ff9eab33)](https://codebeat.co/projects/github-com-dineybomfim-markovmodel-master)
+-->
+
 
 # Description
 **MarkovModel** is a framework for ... `make an introduction for this component. Explaining the major business goals.`
