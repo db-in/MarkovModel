@@ -1,6 +1,6 @@
 /*
  *	MarkovModel.swift
- *	RoShamBoCore
+ *	MarkovModel
  *
  *	Created by Diney Bomfim on 6/26/18.
  *	Copyright 2018 db-in. All rights reserved.

@@ -63,7 +63,7 @@ Try to switch the `file` to:
 - Harry Potter and the Sorcerer's Stone.txt
 - The Fellowship of the Ring.txt
 - The Return Of The King.txt
-- Or import a new book from https://archive.org/
+- Or import a new book from [https://archive.org/](https://archive.org/)
 */
 let randomText = buildText(starting: "A", length: 200, file: "Books/The Return Of The King.txt")
 print(randomText)

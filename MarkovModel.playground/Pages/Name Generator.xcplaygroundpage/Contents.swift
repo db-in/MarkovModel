@@ -123,7 +123,7 @@ Try to switch the `file` to:
 - French.txt
 - German.txt
 - Serbian.txt
-- Or import a new names from https://www.worldnamegenerator.com/
+- Or import a new names from [https://www.worldnamegenerator.com/](https://www.worldnamegenerator.com/)
 
 (you may have to clear them with Find & Replace regex: `\(.*?\)`)
 */

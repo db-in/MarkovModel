@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MarkovModel Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Struct/MarkovModel" class="dashAnchor"></a>
+
+    <a title="MarkovModel Structure Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          MarkovModel Docs
+        </a>
+         (70% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/dineybomfim/MarkovModel">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Fdineybomfim%2Egithub%2Eio%2FMarkovModel%2Fdocsets%2FMarkovModel%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">MarkovModel Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      MarkovModel Structure Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/DecisionProcess.html">DecisionProcess</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Matrix.html">Matrix</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MarkovModel.html">MarkovModel</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:11MarkovModel6Matrixa">Matrix</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:11MarkovModel6Vectora">Vector</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>MarkovModel</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MarkovModel</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">Hashable</span></code></pre>
+
+                </div>
+              </div>
+            <p>This entity applies MarkovModel for fully observable models, using Markov Chain and Markov
+decision process. <a href="https://en.wikipedia.org/wiki/Markov_model">More about Markov Models.</a></p>
+
+<p>Given N possibles states, this entity calculates predictions of the next states given a
+current state. It relies on calculations and operations between vector and matrix.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Properties"></a>
+                <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
+                <a href="#/Properties">
+                  <h3 class="section-name">Properties</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11MarkovModelAAV5chains10DictionaryVyxAEyxSiGGvp"></a>
+                    <a name="//apple_ref/swift/Property/chain" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11MarkovModelAAV5chains10DictionaryVyxAEyxSiGGvp">chain</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The Markov Chain is a matrix which is the essense of Markov Model.
+It represents the from-to states.</p>
+<pre class="highlight swift"><code>   <span class="kt">From</span>
+<span class="o">|</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mi">0</span> <span class="o">|</span>
+<span class="o">|</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">0</span> <span class="o">|</span> <span class="kt">To</span>
+<span class="o">|</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">1</span> <span class="o">|</span>
+</code></pre>
+
+<p>The data is represented by a bi-dimensional dictionary of integer numbers in order
+to optimize memory and performance.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">chain</span><span class="p">:</span> <span class="kt">Matrix</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Constructors"></a>
+                <a name="//apple_ref/swift/Section/Constructors" class="dashAnchor"></a>
+                <a href="#/Constructors">
+                  <h3 class="section-name">Constructors</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11MarkovModelAAVAByxGSayxG11transitions_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(transitions:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11MarkovModelAAVAByxGSayxG11transitions_tcfc">init(transitions:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize a Markov Chain with an array of transitions, indicating the history of
+state transitions that the chain will be built upon.</p>
+<div class="aside aside-complexity">
+    <p class="aside-title">Complexity</p>
+    <p>O(n), where <em>n</em> is the length of the <strong>transitions</strong>.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">transitions</span><span class="p">:</span> <span class="p">[</span><span class="kt">T</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>transitions</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array describing the sequence of consecutive transitions.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11MarkovModelAAV7processySayxG11transitions_ys10DictionaryVyxAGyxSiGGc10completiontFZ"></a>
+                    <a name="//apple_ref/swift/Method/process(transitions:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11MarkovModelAAV7processySayxG11transitions_ys10DictionaryVyxAGyxSiGGc10completiontFZ">process(transitions:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method is dedicated for large transition data processing.</p>
+<div class="aside aside-complexity">
+    <p class="aside-title">Complexity</p>
+    <p>O(n), where <em>n</em> is the length of the <strong>transitions</strong>.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">process</span><span class="p">(</span><span class="nv">transitions</span><span class="p">:</span> <span class="p">[</span><span class="kt">T</span><span class="p">],</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">(</span><span class="kt">Matrix</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>transitions</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array describing the sequence of consecutive transitions.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure in wich the matrix can be freely manipulated.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Extension"></a>
+                <a name="//apple_ref/swift/Section/Extension" class="dashAnchor"></a>
+                <a href="#/Extension">
+                  <h3 class="section-name">Extension</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11MarkovModelAAV11descriptionSSvp"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11MarkovModelAAV11descriptionSSvp">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A pretty printed representation of the Markov Chain (matrix)</p>
+<pre class="highlight swift"><code>        <span class="kt">From</span>
+<span class="o">|</span> <span class="mf">1.00</span>  <span class="mf">0.00</span>  <span class="mf">0.00</span> <span class="o">|</span>
+<span class="o">|</span>                  <span class="o">|</span>
+<span class="o">|</span> <span class="mf">0.00</span>  <span class="mf">1.00</span>  <span class="mf">0.00</span> <span class="o">|</span> <span class="kt">To</span>
+<span class="o">|</span>                  <span class="o">|</span>
+<span class="o">|</span> <span class="mf">0.00</span>  <span class="mf">0.00</span>  <span class="mf">1.00</span> <span class="o">|</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2018 <a class="link" href="http://db-in.com/" target="_blank" rel="external">Dieny Bomfim</a>. All rights reserved. (Last updated: 2018-07-19)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

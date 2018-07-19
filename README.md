@@ -95,7 +95,7 @@ print(markovModel)
 // or
 print(markovModel.chain)
 
-// Will print
+// It will print
    B     A    
 
 | 0.00  0.50 |  B   

@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
+		6019A053210086E70046D093 /* Jazzy */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 6019A054210086E80046D093 /* Build configuration list for PBXAggregateTarget "Jazzy" */;
+			buildPhases = (
+				6019A057210086EF0046D093 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Jazzy;
+			productName = Jazzy;
+		};
 		603B602220EB367C00DA40CB /* SwiftLint */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = 603B604A20EB367C00DA40CB /* Build configuration list for PBXAggregateTarget "SwiftLint" */;
@@ -284,6 +295,9 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Emirates;
 				TargetAttributes = {
+					6019A053210086E70046D093 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
 					603B601E20EB367C00DA40CB = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
@@ -314,6 +328,7 @@
 				603B602220EB367C00DA40CB /* SwiftLint */,
 				603B603020EB367C00DA40CB /* MarkovModelTests */,
 				603B603C20EB367C00DA40CB /* ModuleIntegrationTests */,
+				6019A053210086E70046D093 /* Jazzy */,
 			);
 		};
 /* End PBXProject section */
@@ -377,6 +392,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MarkovModelTests/Pods-MarkovModelTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		6019A057210086EF0046D093 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = jazzy;
 		};
 		603B602120EB367C00DA40CB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -514,6 +542,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		6019A055210086E80046D093 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6019A056210086E80046D093 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		603B604520EB367C00DA40CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -936,6 +980,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6019A054210086E80046D093 /* Build configuration list for PBXAggregateTarget "Jazzy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6019A055210086E80046D093 /* Debug */,
+				6019A056210086E80046D093 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		603B601920EB367C00DA40CB /* Build configuration list for PBXProject "MarkovModel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
