@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.documentation_url = "https://dineybomfim.github.io/MarkovModel/"
   s.license = { :type => "GPU", :file => "LICENSE" }
   s.author = 'Diney Bomfim'
-  s.source = { :git => "https://github.com/dineybomfim/MarkovModel.git", :tag => "RELEASE-#{s.version}", :submodules => true }
+  s.source = { :git => "https://github.com/dineybomfim/MarkovModel.git", :tag => s.version, :submodules => true }
   s.swift_version = '4.1'
 
   s.requires_arc = true
