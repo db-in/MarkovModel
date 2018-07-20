@@ -1,6 +1,6 @@
 # MarkovModel
 
-[![Build Status](https://travis-ci.org/dineybomfim/MarkovModel.svg?branch=master)](https://travis-ci.org/dineybomfim/MarkovModel)
+[![Build Status](https://travis-ci.org/db-in/MarkovModel.svg?branch=master)](https://travis-ci.org/db-in/MarkovModel)
 [![codecov](https://codecov.io/gh/dineybomfim/MarkovModel/branch/master/graph/badge.svg)](https://codecov.io/gh/dineybomfim/MarkovModel)
 [![codebeat badge](https://codebeat.co/badges/366a5994-abec-4c41-8e64-6f71ff9eab33)](https://codebeat.co/projects/github-com-dineybomfim-markovmodel-master)
 ![Version](https://img.shields.io/badge/swift-4.1-red.svg)
