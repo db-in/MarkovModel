@@ -1,39 +1,60 @@
 # MarkovModel
 
-[![Build Status](https://travis-ci.org/dineybomfim/MarkovModel.svg?branch=master)](https://travis-ci.org/Alamofire/Alamofire)
+[![Build Status](https://travis-ci.org/dineybomfim/MarkovModel.svg?branch=master)](https://travis-ci.org/dineybomfim/MarkovModel)
 [![codecov](https://codecov.io/gh/dineybomfim/MarkovModel/branch/master/graph/badge.svg)](https://codecov.io/gh/dineybomfim/MarkovModel)
-![POD](https://img.shields.io/badge/swift-4.1-red.svg)
-[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/MarkovModel.svg)](https://img.shields.io/cocoapods/v/MarkovModel.svg)
-[![Platform](https://img.shields.io/cocoapods/p/MarkovModel.svg?style=flat)](https://markovmodel.github.io/MarkovModel)
 [![codebeat badge](https://codebeat.co/badges/366a5994-abec-4c41-8e64-6f71ff9eab33)](https://codebeat.co/projects/github-com-dineybomfim-markovmodel-master)
-<!--
-[![CocoaPods](https://img.shields.io/cocoapods/at/MarkovModel.svg)]()
-[![CocoaPods](https://img.shields.io/cocoapods/dt/MarkovModel.svg?label=pod-downloads)]()
--->
-
+![Version](https://img.shields.io/badge/swift-4.1-red.svg)
+[![Platform](https://img.shields.io/cocoapods/p/MarkovModel.svg?style=flat)](https://markovmodel.github.io/MarkovModel)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/MarkovModel.svg)](https://img.shields.io/cocoapods/v/MarkovModel.svg)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 # Description
-**MarkovModel** is a framework for ... `make an introduction for this component. Explaining the major business goals.`
-https://en.wikipedia.org/wiki/Markov_model
-Markov models
-System state is fully observable
+**MarkovModel** is a Swift framework that uses the power of Markov Model to process and calculate states in a known system. It can be used to achieve several goals in Machine Learning, games and others.
+To know more about Markov Model, visit [https://wikipedia.org/wiki/Markov_model](https://wikipedia.org/wiki/Markov_model)
 
 **Features**
 
 - [x] Automatically creates Markov Chain based on a given sequence of transactions;
 - [x] Allows manual matrix manipulation for mutating members;
-- [x] Markov decision process with weighted random selection;
-- [x] Next state prediction.
+- [x] Pretty printed matrix for debugging;
+- [x] Markov decision process, including weighted random process;
+- [x] Next state prediction;
+- [x] [Full API documentation](https://db-in.github.io/MarkovModel/).
 
 # Installation
 
-#### CocoaPods:
-[CocoaPods](https://guides.cocoapods.org/using/getting-started.html) is a dependency manager for Cocoa projects. You can get more information about how to use it on [Using CocoaPods](https://guides.cocoapods.org/using/using-cocoapods.html)
+### Using [CocoaPods](https://cocoapods.org)
 
-Once you ready with CocoaPods, use this code in your `Podfile`:
+Add to your **Podfile** file
 
 ```
 pod 'MarkovModel'
+```
+
+### Using [Carthage](https://github.com/Carthage/Carthage)
+
+Add to your **Cartfile** or **Cartfile.private** file
+
+```
+github "db-in/MarkovModel"
+```
+
+### Using [Swift Package Manager](https://swift.org/package-manager)
+
+Add to your **Package.swift** file
+
+```swift
+let package = Package(
+    name: "myproject",
+    dependencies: [
+        .package(url: "https://github.com/db-in/MarkovModel.git"),
+    ],
+    targets: [
+        .target(
+            name: "myproject",
+            dependencies: ["MarkovModel"]),
+    ]
+)
 ```
 
 # Requirements

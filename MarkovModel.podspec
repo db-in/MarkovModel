@@ -1,15 +1,15 @@
 Pod::Spec.new do |s|
   s.name = "MarkovModel"
-  s.version = "1.0.1"
+  s.version = "1.0.2"
   s.summary = "Micro Feature"
   s.description = <<-DESC
                        MarkovModel is resposible for ...
                        DESC
   s.homepage = "http://blog.db-in.com/"
-  s.documentation_url = "https://dineybomfim.github.io/MarkovModel/"
+  s.documentation_url = "https://db-in.github.io/MarkovModel/"
   s.license = { :type => "GPU", :file => "LICENSE" }
   s.author = 'Diney Bomfim'
-  s.source = { :git => "https://github.com/dineybomfim/MarkovModel.git", :tag => s.version, :submodules => true }
+  s.source = { :git => "https://github.com/db-in/MarkovModel.git", :tag => s.version, :submodules => true }
   s.swift_version = '4.1'
 
   s.requires_arc = true
