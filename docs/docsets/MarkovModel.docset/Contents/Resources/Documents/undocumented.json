@@ -9,8 +9,71 @@
     },
     {
       "file": "/Works/Companies/db-in/Clash RoShamBo/iOS/MarkovModel/MarkovModel/Sources/MarkovModel.swift",
+      "line": 20,
+      "symbol": "DecisionProcess.predict",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Works/Companies/db-in/Clash RoShamBo/iOS/MarkovModel/MarkovModel/Sources/MarkovModel.swift",
+      "line": 20,
+      "symbol": "DecisionProcess.predict",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Works/Companies/db-in/Clash RoShamBo/iOS/MarkovModel/MarkovModel/Sources/MarkovModel.swift",
+      "line": 20,
+      "symbol": "DecisionProcess.predict",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Works/Companies/db-in/Clash RoShamBo/iOS/MarkovModel/MarkovModel/Sources/MarkovModel.swift",
       "line": 21,
       "symbol": "DecisionProcess.random",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Works/Companies/db-in/Clash RoShamBo/iOS/MarkovModel/MarkovModel/Sources/MarkovModel.swift",
+      "line": 21,
+      "symbol": "DecisionProcess.random",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Works/Companies/db-in/Clash RoShamBo/iOS/MarkovModel/MarkovModel/Sources/MarkovModel.swift",
+      "line": 21,
+      "symbol": "DecisionProcess.random",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Works/Companies/db-in/Clash RoShamBo/iOS/MarkovModel/MarkovModel/Sources/MarkovModel.swift",
+      "line": 21,
+      "symbol": "DecisionProcess.random",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Works/Companies/db-in/Clash RoShamBo/iOS/MarkovModel/MarkovModel/Sources/MarkovModel.swift",
+      "line": 22,
+      "symbol": "DecisionProcess.weightedRandom",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Works/Companies/db-in/Clash RoShamBo/iOS/MarkovModel/MarkovModel/Sources/MarkovModel.swift",
+      "line": 22,
+      "symbol": "DecisionProcess.weightedRandom",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Works/Companies/db-in/Clash RoShamBo/iOS/MarkovModel/MarkovModel/Sources/MarkovModel.swift",
+      "line": 22,
+      "symbol": "DecisionProcess.weightedRandom",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
@@ -30,8 +93,71 @@
     },
     {
       "file": "/Works/Companies/db-in/Clash RoShamBo/iOS/MarkovModel/MarkovModel/Sources/Matrix.swift",
+      "line": null,
+      "symbol": "Matrix",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Works/Companies/db-in/Clash RoShamBo/iOS/MarkovModel/MarkovModel/Sources/Matrix.swift",
+      "line": null,
+      "symbol": "Matrix",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Works/Companies/db-in/Clash RoShamBo/iOS/MarkovModel/MarkovModel/Sources/Matrix.swift",
+      "line": null,
+      "symbol": "Matrix",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Works/Companies/db-in/Clash RoShamBo/iOS/MarkovModel/MarkovModel/Sources/Matrix.swift",
       "line": 13,
       "symbol": "Vector",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Works/Companies/db-in/Clash RoShamBo/iOS/MarkovModel/MarkovModel/Sources/Matrix.swift",
+      "line": 13,
+      "symbol": "Vector",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Works/Companies/db-in/Clash RoShamBo/iOS/MarkovModel/MarkovModel/Sources/Matrix.swift",
+      "line": 13,
+      "symbol": "Vector",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Works/Companies/db-in/Clash RoShamBo/iOS/MarkovModel/MarkovModel/Sources/Matrix.swift",
+      "line": 13,
+      "symbol": "Vector",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Works/Companies/db-in/Clash RoShamBo/iOS/MarkovModel/MarkovModel/Sources/Matrix.swift",
+      "line": 14,
+      "symbol": "Matrix",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Works/Companies/db-in/Clash RoShamBo/iOS/MarkovModel/MarkovModel/Sources/Matrix.swift",
+      "line": 14,
+      "symbol": "Matrix",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Works/Companies/db-in/Clash RoShamBo/iOS/MarkovModel/MarkovModel/Sources/Matrix.swift",
+      "line": 14,
+      "symbol": "Matrix",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },

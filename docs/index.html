@@ -15,7 +15,6 @@
       <div class="content-wrapper">
         <p><a href="index.html">MarkovModel Docs</a> (70% documented)</p>
         <p class="header-right"><a href="https://github.com/db-in/MarkovModel"><img src="img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fdb%2Din%2Egithub%2Eio%2FMarkovModel%2Fdocsets%2FMarkovModel%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -151,47 +150,49 @@ To know more about Markov Model, visit <a href="https://wikipedia.org/wiki/Marko
 <h4 id='training-the-model' class='heading'>Training the Model</h4>
 
 <p>Start by importing the package in the file you want to use it. There are two options of working with the model. By instantiating or by traning it statically.</p>
-<pre class="highlight plaintext"><code>import MarkovModel
-...
-let markovModel = MarkovModel(transitions: ["A", "B", "C", "A", "C"])
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">MarkovModel</span>
+<span class="c1">//...</span>
+<span class="k">let</span> <span class="nv">markovModel</span> <span class="o">=</span> <span class="kt">MarkovModel</span><span class="p">(</span><span class="nv">transitions</span><span class="p">:</span> <span class="p">[</span><span class="s">"A"</span><span class="p">,</span> <span class="s">"B"</span><span class="p">,</span> <span class="s">"C"</span><span class="p">,</span> <span class="s">"A"</span><span class="p">,</span> <span class="s">"C"</span><span class="p">])</span>
 </code></pre>
 
 <p>For very large amount of data (transitions), you may rather take the static approach, once it can train the model and work on it all at once in a closure.</p>
-<pre class="highlight plaintext"><code>import MarkovModel
-...
-MarkovModel.process(transitions: ["A", "B", "C", "A", "C"]) { model in
-    // perform the operations on model
-}
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">MarkovModel</span>
+<span class="c1">//...</span>
+<span class="kt">MarkovModel</span><span class="o">.</span><span class="nf">process</span><span class="p">(</span><span class="nv">transitions</span><span class="p">:</span> <span class="p">[</span><span class="s">"A"</span><span class="p">,</span> <span class="s">"B"</span><span class="p">,</span> <span class="s">"C"</span><span class="p">,</span> <span class="s">"A"</span><span class="p">,</span> <span class="s">"C"</span><span class="p">])</span> <span class="p">{</span> <span class="n">model</span> <span class="k">in</span>
+    <span class="c1">// perform the operations on model</span>
+<span class="p">}</span>
 </code></pre>
 <h4 id='decision-process' class='heading'>Decision Process</h4>
 
 <p>For performance and better API design, all the Markov Decision Process algorithms are done in the matrix itself.
 You can calculate any future state by calling <code>next</code>. There are 3 possible decision process options: <code>predict</code>, <code>random</code> and <code>weightedRandom</code>.</p>
-<pre class="highlight plaintext"><code>markovModel.chain.next(given: "B", process: .random)
+<pre class="highlight swift"><code><span class="n">markovModel</span><span class="o">.</span><span class="n">chain</span><span class="o">.</span><span class="nf">next</span><span class="p">(</span><span class="nv">given</span><span class="p">:</span> <span class="s">"B"</span><span class="p">,</span> <span class="nv">process</span><span class="p">:</span> <span class="o">.</span><span class="n">random</span><span class="p">)</span>
 </code></pre>
 
 <p>You can ommit the process parameter and the default option will be <code>predict</code>.</p>
-<pre class="highlight plaintext"><code>markovModel.chain.next(given: "B")
+<pre class="highlight swift"><code><span class="n">markovModel</span><span class="o">.</span><span class="n">chain</span><span class="o">.</span><span class="nf">next</span><span class="p">(</span><span class="nv">given</span><span class="p">:</span> <span class="s">"B"</span><span class="p">)</span>
 </code></pre>
 
 <p>Sometimes you may want to some column of the matrix itself. The method <code>probabilities</code> can be used to retrieve all the possible transitions from a given state.</p>
-<pre class="highlight plaintext"><code>markovModel.chain.probabilities(given: "B")
+<pre class="highlight swift"><code><span class="n">markovModel</span><span class="o">.</span><span class="n">chain</span><span class="o">.</span><span class="nf">probabilities</span><span class="p">(</span><span class="nv">given</span><span class="p">:</span> <span class="s">"B"</span><span class="p">)</span>
 </code></pre>
 <h4 id='decision-process' class='heading'>Decision Process</h4>
 
 <p>For performance and better API design, all the Markov Decision Process algorithms are done in the matrix itself.
 You can calculate any future state by calling <code>next</code>. There are 3 possible decision process options: <code>predict</code>, <code>random</code> and <code>weightedRandom</code>.</p>
-<pre class="highlight plaintext"><code>let markovModel = MarkovModel(transitions: ["A", "A", "B"])
-print(markovModel)
-// or
-print(markovModel.chain)
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">markovModel</span> <span class="o">=</span> <span class="kt">MarkovModel</span><span class="p">(</span><span class="nv">transitions</span><span class="p">:</span> <span class="p">[</span><span class="s">"A"</span><span class="p">,</span> <span class="s">"A"</span><span class="p">,</span> <span class="s">"B"</span><span class="p">])</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">markovModel</span><span class="p">)</span>
+<span class="c1">// or</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">markovModel</span><span class="o">.</span><span class="n">chain</span><span class="p">)</span>
 
-// It will print
+<span class="cm">/*
+It will print
    B     A    
 
 | 0.00  0.50 |  B   
 |            |
 | 0.00  0.50 |  A   
+*/</span>
 </code></pre>
 <h1 id='faq' class='heading'>FAQ</h1>
 
@@ -206,7 +207,7 @@ print(markovModel.chain)
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="http://db-in.com/" target="_blank" rel="external">Dieny Bomfim</a>. All rights reserved. (Last updated: 2018-07-20)</p>
+          <p>&copy; 2018 <a class="link" href="http://blog.db-in.com/" target="_blank" rel="external">Diney Bomfim</a>. All rights reserved. (Last updated: 2018-07-21)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

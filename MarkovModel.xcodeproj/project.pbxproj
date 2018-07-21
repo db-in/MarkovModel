@@ -73,6 +73,9 @@
 		37E870F0A86E8F9ED820304D /* Pods-MarkovModelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarkovModelTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarkovModelTests/Pods-MarkovModelTests.release.xcconfig"; sourceTree = "<group>"; };
 		4AF3222EA1A8091170A50C22 /* Pods-MarkovModelTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarkovModelTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarkovModelTests/Pods-MarkovModelTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5EC0AACD811D8997A884CAF8 /* Pods_ModuleIntegrationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ModuleIntegrationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60294F44210321DB000D1EB9 /* codecov.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = codecov.yml; sourceTree = SOURCE_ROOT; };
+		60294F45210321DB000D1EB9 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = SOURCE_ROOT; };
+		60294F46210321DB000D1EB9 /* .codebeatignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .codebeatignore; sourceTree = SOURCE_ROOT; };
 		603B601F20EB367C00DA40CB /* MarkovModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarkovModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		603B602420EB367C00DA40CB /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
 		603B602520EB367C00DA40CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -158,8 +161,11 @@
 		603B602320EB367C00DA40CB /* MarkovModel */ = {
 			isa = PBXGroup;
 			children = (
+				60294F46210321DB000D1EB9 /* .codebeatignore */,
 				603B602420EB367C00DA40CB /* .gitignore */,
 				603B602820EB367C00DA40CB /* .swiftlint.yml */,
+				60294F45210321DB000D1EB9 /* .travis.yml */,
+				60294F44210321DB000D1EB9 /* codecov.yml */,
 				603B602520EB367C00DA40CB /* Info.plist */,
 				603B602920EB367C00DA40CB /* LICENSE */,
 				603B602620EB367C00DA40CB /* MarkovModel.h */,
@@ -404,7 +410,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = jazzy;
+			shellScript = "jazzy --podspec \"${PROJECT_NAME}.podspec\" --github_url \"https://github.com/db-in/MarkovModel\"\n";
 		};
 		603B602120EB367C00DA40CB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;

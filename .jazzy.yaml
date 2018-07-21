@@ -1,8 +1,0 @@
-author: Dieny Bomfim
-author_url: http://db-in.com/
-github_url: https://github.com/db-in/MarkovModel
-root_url: https://db-in.github.io/MarkovModel/
-module: MarkovModel
-output: docs
-theme: apple
-xcodebuild_arguments: [-workspace, 'MarkovModel.xcworkspace', -scheme, 'MarkovModel']

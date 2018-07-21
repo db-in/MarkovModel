@@ -72,17 +72,17 @@ The Markov Model can be used to achieve many goals. This section will explain th
 #### Training the Model
 Start by importing the package in the file you want to use it. There are two options of working with the model. By instantiating or by traning it statically.
 
-```
+```swift
 import MarkovModel
-...
+//...
 let markovModel = MarkovModel(transitions: ["A", "B", "C", "A", "C"])
 ```
 
 For very large amount of data (transitions), you may rather take the static approach, once it can train the model and work on it all at once in a closure.
 
-```
+```swift
 import MarkovModel
-...
+//...
 MarkovModel.process(transitions: ["A", "B", "C", "A", "C"]) { model in
 	// perform the operations on model
 }
@@ -92,38 +92,40 @@ MarkovModel.process(transitions: ["A", "B", "C", "A", "C"]) { model in
 For performance and better API design, all the Markov Decision Process algorithms are done in the matrix itself.
 You can calculate any future state by calling `next`. There are 3 possible decision process options: `predict`, `random` and `weightedRandom`.
 
-```
+```swift
 markovModel.chain.next(given: "B", process: .random)
 ```
 
 You can ommit the process parameter and the default option will be `predict`.
 
 
-```
+```swift
 markovModel.chain.next(given: "B")
 ```
 
 Sometimes you may want to some column of the matrix itself. The method `probabilities` can be used to retrieve all the possible transitions from a given state.
 
-```
+```swift
 markovModel.chain.probabilities(given: "B")
 ```
 #### Decision Process
 For performance and better API design, all the Markov Decision Process algorithms are done in the matrix itself.
 You can calculate any future state by calling `next`. There are 3 possible decision process options: `predict`, `random` and `weightedRandom`.
 
-```
+```swift
 let markovModel = MarkovModel(transitions: ["A", "A", "B"])
 print(markovModel)
 // or
 print(markovModel.chain)
 
-// It will print
+/*
+It will print
    B     A    
 
 | 0.00  0.50 |  B   
 |            |
 | 0.00  0.50 |  A   
+*/
 ```
 
 
