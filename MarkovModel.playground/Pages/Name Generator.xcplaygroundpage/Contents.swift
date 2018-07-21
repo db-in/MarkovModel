@@ -1,6 +1,5 @@
 import Foundation
 import MarkovModel
-import UIKit
 
 /*:
 # Name Generator using Markov Model
